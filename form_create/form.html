@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <title>お便りコーナー</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header clearfix">
+        <a href="index.html" >
+          <img src="./images/rogo.jpeg" class="logo_image">
+        </a>
+        <nav>
+          <ul class="top_menu clearfix">
+            <li><a href="form.html">ホーム</a></li>
+            <li><a href="#">ラジオアーカイブ</a></li>
+            <li><a href="#">パーソナリティブログ</a></li>
+            <li><a href="#">お手紙はこちら</a></li>
+          </ul>
+        </nav>
+      </header>
+      <img src="./images/radio.jpg" class="image_area">
+      <div class="wrapper clearfix">
+        <aside class="side_menu">
+          <nav>
+            <ul>
+              <li class="point"><a href="#">ラジオアーカイブ</a></li>
+              <li class="point"><a href="#">パーソナリティブログ</a></li>
+              <li class="point"><a href="#">お手紙はこちら</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <article class="content">
+          <table class="contact">
+            <tr>
+              <th>ペンネーム</th>
+              <td>
+                <input type="text" class="c_name" name="name">
+              </td>
+            </tr>
+            <tr>
+              <th>メールアドレス</th>
+              <td class>
+                <input type="email" class="c_mail" name="email">
+              </td>
+            </tr>
+            <tr>
+              <th>性別</th>
+              <td>
+                <input type="checkbox" class="c-men" name="gender">男
+                <input type="checkbox" class="c-femail" name="gender">女
+                <input type="checkbox" class="c-femail" name="gender">内緒
+              </td>
+            </tr>
+            <tr>
+              <th>お手紙の内容</th>
+              <td>
+                <input type="text" class="c_content" name="content">
+              </td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="submit" class="c_send" name="send">
+              </td>
+            </tr>
+          </table>
+        </article>
+      </div>
+      <footer class="footer">
+        <p>Copyright © 2021 All ritht nippon.</p>
+      </footer>
+    </div>
+  </body>
+</html>

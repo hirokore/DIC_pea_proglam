@@ -1,0 +1,147 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul.top_menu {
+  float: right;
+}
+li {
+  list-style: none;
+}
+
+/* header部分 */
+.container {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100%;
+}
+
+.header{
+  background-color: black;
+  height: 50px;
+  font-size: 1.5rem;
+}
+.top_menu li {
+  float: left;
+  padding: auto;
+}
+.top_menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+.top_menu li a:hover {
+  text-decoration: underline;
+}
+
+/* aside部分 */
+
+.logo_image {
+  width: 50px;
+  float: left;
+  margin: 0;
+}
+.image_area {
+  width: 100%;
+  height: 35rem;
+}
+.side_menu {
+  float: left;
+  width: 300px;
+}
+.wrapper {
+  margin-top: 10px;
+  padding-bottom: 110px;
+}
+.side_menu li:hover {
+  opacity: 0.6;
+}
+.side_menu li {
+  background-color: black;
+  height: 6rem;
+  margin-bottom: 10px;
+}
+.side_menu li a {
+  font-size: 2rem;
+  color: #fff;
+  display: block;
+  padding: 2rem;
+  text-decoration: none;
+}
+.banner {
+  margin-top: 20px;
+}
+.banner img {
+  width: 100%;
+}
+
+/* article部分 */
+
+.content {
+  width: 660px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  float: left;
+}
+.news {
+  height: 200px;
+  background-color: #FCE8E7;
+  padding: 20px;
+  overflow: scroll;
+  line-height: 2;
+}
+
+.banner_content {
+  margin-top: 10px;
+  display: table;
+}
+.banner_content p {
+  display: table-cell;
+}
+.banner_content p img {
+  width: 100%;
+}
+/* footer部分 */
+
+.footer {
+  background-color: #4D4D4D;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  display: table;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/* business.html_article */
+
+.side_menu .point {
+  background-color: black;
+  font:
+}
+.side_menu .point a {
+  color: white;
+}
+
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}

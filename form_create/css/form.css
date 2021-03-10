@@ -1,0 +1,34 @@
+.contact tr {
+  height: 7rem;
+}
+
+.content th {
+  text-align: right;
+  padding-right: 20px;
+  width: 150px;
+}
+
+.content .c_name {
+  width: 480px;
+}
+
+.content .c_mail {
+  width: 480px;
+}
+
+.content .c_content {
+  width: 480px;
+  height: 5rem;
+}
+
+.content .c_send {
+  height: 5rem;
+  font-size: 28px;
+  color: white;
+  background-color: green;
+  margin-left: 160px;
+}
+
+.content .c_send:hover {
+  opacity: 0.6;
+}
