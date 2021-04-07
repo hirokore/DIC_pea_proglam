@@ -43,10 +43,12 @@ class VendingMachine
       @slot_money = 0
     end
     def juce_manage
-        juces = {cora:{count:5,value:120},cora2:{count:8,value:120},coffee:{count:3,value:150}}
-        #"<Drink: name=#{name}, price=#{price}>"
+        stocks = {cora:{count:5,value:120}}
+        stocks
     end
-    
+    # def to_s(name,price)
+    #     "<Drink: name=#{name}, price=#{price}>"
+    # end
   end
 
 
