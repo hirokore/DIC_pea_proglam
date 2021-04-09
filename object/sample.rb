@@ -20,7 +20,7 @@ class VendingMachine
       # 最初の自動販売機に入っている金額は0円
       @total_amount = 0
       @slot_money = 0
-      @cora = {name:"コーラ",value:120,count:0}
+      @cora = {name:"コーラ",value:120,count:5}
     end
     # 投入金額の総計を取得できる。
     def current_slot_money
@@ -60,6 +60,7 @@ class VendingMachine
         @cora[:count] -= 1
         @total_amount = @total_amount + @cora[:value]
         reduce_money(@cora[:value])
+        puts "はい、#{@cora[:name]}だよ。"
       elsif purchase_decision == "在庫切れ"
         purchase_decision
       elsif purchase_decision == "金額不足"
@@ -74,6 +75,10 @@ class VendingMachine
       #   puts "#{current_slot_money}円のお釣りです。"
       end
     end
+    def sale_amount
+      "総売上金は#{@total_amount}円です。"
+    end
+    
     def reduce_money(i)
       @slot_money -= i
     end
@@ -82,9 +87,8 @@ end
 vm = VendingMachine.new
 p vm.juce_manage
 
-vm.slot_money(100)
-p vm.current_slot_money
+vm.slot_money(500)
 
 p vm.juce_buy
-p vm.purchase_decision
 
+p vm.sale_amount
