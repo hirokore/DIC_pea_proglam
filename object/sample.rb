@@ -46,7 +46,7 @@ class VendingMachine
     def juce_manage
       puts "#{@cora[:name]}は#{@cora[:value]}円、残り#{@cora[:count]}本です。"
     end
-    def buy_decision
+    def purchase_decision
       if @cora[:count] == 0      
         return "在庫切れ"
       elsif @cora[:value] > @slot_money
@@ -56,10 +56,10 @@ class VendingMachine
       end
     end
     def juce_buy
-      if buy_decision == "購入可能"
+      if purchase_decision == "購入可能"
         @cora[:count] -= 1
         @total_amount = @total_amount + @cora[:value]
-      #   heruheru(select_drink[:value])
+        reduce_money(@cora[:value])
       #   @total = @total + select_drink[:value]
       #   select_drink[:count] -= 1
       #   puts "はい、#{select_drink[:name]}だよ。"
@@ -70,9 +70,9 @@ class VendingMachine
       #   puts "#{current_slot_money}円のお釣りです。"
       end
     end
-    # def to_s(name,price)
-    #     "<Drink: name=#{name}, price=#{price}>"
-    # end
+    def reduce_money(i)
+      @slot_money -= i
+    end
 end
 
 vm = VendingMachine.new
@@ -82,3 +82,5 @@ vm.slot_money(500)
 p vm.current_slot_money
 
 p vm.juce_buy
+
+p vm.current_slot_money
