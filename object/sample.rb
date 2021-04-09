@@ -35,11 +35,12 @@ class VendingMachine
       return false unless MONEY.include?(money)
       # 自動販売機にお金を入れる
       @slot_money += money
+      puts "#{@slot_money}円、投入しました。"
     end
     # 払い戻し操作を行うと、投入金額の総計を釣り銭として出力する。
     def return_money
       # 返すお金の金額を表示する
-      puts @slot_money
+      puts "お釣りは#{@slot_money}円です。"
       # 自動販売機に入っているお金を0円に戻す
       @slot_money = 0
     end
@@ -76,7 +77,7 @@ class VendingMachine
       end
     end
     def sale_amount
-      "総売上金は#{@total_amount}円です。"
+      puts "総売上金は#{@total_amount}円です。"
     end
     
     def reduce_money(i)
@@ -85,10 +86,12 @@ class VendingMachine
 end
 
 vm = VendingMachine.new
-p vm.juce_manage
+vm.juce_manage
 
 vm.slot_money(500)
 
-p vm.juce_buy
+vm.juce_buy
 
-p vm.sale_amount
+vm.sale_amount
+
+vm.return_money
