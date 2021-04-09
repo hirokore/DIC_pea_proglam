@@ -18,6 +18,7 @@ class VendingMachine
     # （自動販売機に投入された金額をインスタンス変数の @slot_money に代入する）
     def initialize
       # 最初の自動販売機に入っている金額は0円
+      @total_amount = 0
       @slot_money = 0
       @cora = {name:"コーラ",value:120,count:5}
     end
@@ -45,13 +46,28 @@ class VendingMachine
     def juce_manage
       puts "#{@cora[:name]}は#{@cora[:value]}円、残り#{@cora[:count]}本です。"
     end
-    def buy_decision? 
+    def buy_decision
       if @cora[:count] == 0      
         return "在庫切れ"
       elsif @cora[:value] > @slot_money
         return "金額不足"
       else
-        true
+        "購入可能"
+      end
+    end
+    def juce_buy
+      if buy_decision == "購入可能"
+        @cora[:count] -= 1
+        @total_amount = @total_amount + @cora[:value]
+      #   heruheru(select_drink[:value])
+      #   @total = @total + select_drink[:value]
+      #   select_drink[:count] -= 1
+      #   puts "はい、#{select_drink[:name]}だよ。"
+      # else
+      #   juce_jude(drink)
+      # end
+      # if current_slot_money >= 0
+      #   puts "#{current_slot_money}円のお釣りです。"
       end
     end
     # def to_s(name,price)
@@ -62,7 +78,7 @@ end
 vm = VendingMachine.new
 p vm.juce_manage
 
-vm.slot_money(100)
+vm.slot_money(500)
 p vm.current_slot_money
 
-p vm.buy_decision?
+p vm.juce_buy
