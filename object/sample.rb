@@ -64,7 +64,6 @@ class VendingMachine
         purchase_decision
       elsif purchase_decision == "金額不足"
         purchase_decision
-
       #   @total = @total + select_drink[:value]
       #   select_drink[:count] -= 1
       #   puts "はい、#{select_drink[:name]}だよ。"
