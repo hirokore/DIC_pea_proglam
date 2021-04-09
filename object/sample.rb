@@ -19,7 +19,7 @@ class VendingMachine
     def initialize
       # 最初の自動販売機に入っている金額は0円
       @slot_money = 0
-      
+      @cora = {name:"コーラ",value:120,count:5}
     end
     # 投入金額の総計を取得できる。
     def current_slot_money
@@ -43,13 +43,13 @@ class VendingMachine
       @slot_money = 0
     end
     def juce_manage
-        stocks = {cora:{count:5,value:120}}
-        stocks
+      puts "#{@cora[:name]}は#{@cora[:value]}円、残り#{@cora[:count]}本です。"
     end
     # def to_s(name,price)
     #     "<Drink: name=#{name}, price=#{price}>"
     # end
-  end
+end
 
+vm = VendingMachine.new
 
-
+p vm.juce_manage
