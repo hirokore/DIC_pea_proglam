@@ -78,6 +78,7 @@ class VendingMachine
     # machine.insert 50
     # machine.purchasable_drink_names # => [:cola, :water]
   end
+
   def purchase_decision(drink)
      @selected_drink = drink_select(drink)
     if @selected_drink[:count] == 0      
@@ -100,14 +101,6 @@ class VendingMachine
       purchase_decision(drink)
     elsif purchase_decision(drink) == "金額不足"
       purchase_decision(drink)
-    #   @total = @total + select_drink[:value]
-    #   select_drink[:count] -= 1
-    #   puts "はい、#{select_drink[:name]}だよ。"
-    # else
-    #   juce_jude(drink)
-    # end
-    # if current_slot_money >= 0
-    #   puts "#{current_slot_money}円のお釣りです。"
     end
   end
   def sale_amount
@@ -121,7 +114,7 @@ end
 
 vm = VendingMachine.new
 
-vm.slot_money(100)
+vm.slot_money(500)
 
 vm.juce_manage
 
