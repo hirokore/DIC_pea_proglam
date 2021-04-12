@@ -31,7 +31,7 @@ class VendingMachine
     if drink == "コーラ"
       @cora
     elsif drink == "レッドブル"
-      @redblue
+      @redbull
     elsif drink == "水"
       @water
     else
@@ -39,8 +39,6 @@ class VendingMachine
     end
   end
 
-
-  def 
   # 投入金額の総計を取得できる。
   def current_slot_money
     # 自動販売機に入っているお金を表示する
@@ -63,28 +61,45 @@ class VendingMachine
     # 自動販売機に入っているお金を0円に戻す
     @slot_money = 0
   end
+
+
   def juce_manage
-    puts "#{@cora[:name]}は#{@cora[:value]}円、残り#{@cora[:count]}本です。"
+    # puts "#{@cora[:name]}は#{@cora[:value]}円、残り#{@cora[:count]}本です。"
+    puts "#-------------------購入可能リスト-----------------------#"
+
+    [@cora,@redbull,@water].each do |drink|
+      if  drink[:count] > 0 && drink[:value] <= @slot_money        
+       puts "#{drink[:name]}は#{drink[:value]}円、残り#{drink[:count]}本です。"
+      end
+    end
+    puts "#--------------------------------------------------------#"
+
+    # machine.insert 100
+    # machine.insert 50
+    # machine.purchasable_drink_names # => [:cola, :water]
   end
-  def purchase_decision
-    if @cora[:count] == 0      
+  def purchase_decision(drink)
+     @selected_drink = drink_select(drink)
+    if @selected_drink[:count] == 0      
       "在庫切れ"
-    elsif @cora[:value] > @slot_money
+    elsif @selected_drink[:value] > @slot_money
       "金額不足"
     else
       "購入可能"
     end
   end
-  def juce_buy
-    if purchase_decision == "購入可能"
-      @cora[:count] -= 1
-      @total_amount = @total_amount + @cora[:value]
-      reduce_money(@cora[:value])
-      puts "はい、#{@cora[:name]}だよ。"
-    elsif purchase_decision == "在庫切れ"
-      purchase_decision
-    elsif purchase_decision == "金額不足"
-      purchase_decision
+
+  def juce_buy(drink)
+    @selected_drink = drink_select(drink)
+    if purchase_decision(drink) == "購入可能"
+      @selected_drink[:count] -= 1
+      @total_amount = @total_amount + @selected_drink[:value]
+      reduce_money(@selected_drink[:value])
+      puts "はい、#{@selected_drink[:name]}だよ。"
+    elsif purchase_decision(drink) == "在庫切れ"
+      purchase_decision(drink)
+    elsif purchase_decision(drink) == "金額不足"
+      purchase_decision(drink)
     #   @total = @total + select_drink[:value]
     #   select_drink[:count] -= 1
     #   puts "はい、#{select_drink[:name]}だよ。"
@@ -105,11 +120,11 @@ class VendingMachine
 end
 
 vm = VendingMachine.new
+
+vm.slot_money(100)
+
 vm.juce_manage
 
-vm.slot_money(500)
-
-vm.juce_buy
+vm.juce_buy("コーラ")
 
 vm.sale_amount
-
