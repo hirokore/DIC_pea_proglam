@@ -1,0 +1,350 @@
+rails % # rails _5.2.5_ new callback_app -d postgresql
+      create  
+      create  README.md
+      create  Rakefile
+      create  .ruby-version
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+         run  git init from "."
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /Users/hirokore-mac/workspace/rails/callback_app/.git/
+      create  package.json
+      create  app
+      create  app/assets/config/manifest.js
+      create  app/assets/javascripts/application.js
+      create  app/assets/javascripts/cable.js
+      create  app/assets/stylesheets/application.css
+      create  app/channels/application_cable/channel.rb
+      create  app/channels/application_cable/connection.rb
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/jobs/application_job.rb
+      create  app/mailers/application_mailer.rb
+      create  app/models/application_record.rb
+      create  app/views/layouts/application.html.erb
+      create  app/views/layouts/mailer.html.erb
+      create  app/views/layouts/mailer.text.erb
+      create  app/assets/images/.keep
+      create  app/assets/javascripts/channels
+      create  app/assets/javascripts/channels/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  bin/update
+      create  bin/yarn
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/cable.yml
+      create  config/puma.rb
+      create  config/spring.rb
+      create  config/storage.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/application_controller_renderer.rb
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/content_security_policy.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/cors.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/new_framework_defaults_5_2.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/master.key
+      append  .gitignore
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/apple-touch-icon-precomposed.png
+      create  public/apple-touch-icon.png
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp
+      create  tmp/.keep
+      create  tmp/pids
+      create  tmp/pids/.keep
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor
+      create  vendor/.keep
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/fixtures/files
+      create  test/fixtures/files/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  test/system
+      create  test/system/.keep
+      create  test/application_system_test_case.rb
+      create  storage
+      create  storage/.keep
+      create  tmp/storage
+      create  tmp/storage/.keep
+      remove  config/initializers/cors.rb
+      remove  config/initializers/new_framework_defaults_5_2.rb
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/............
+Resolving dependencies....
+Fetching rake 13.0.3
+Installing rake 13.0.3
+Fetching rack 2.2.3
+Fetching websocket-extensions 0.1.5
+Fetching arel 9.0.0
+Fetching builder 3.2.4
+Fetching marcel 1.0.1
+Fetching minitest 5.14.4
+Fetching thread_safe 0.3.6
+Fetching nio4r 2.5.7
+Fetching bindex 0.8.1
+Fetching racc 1.5.2
+Fetching crass 1.0.6
+Fetching concurrent-ruby 1.1.8
+Fetching erubi 1.10.0
+Fetching mini_mime 1.1.0
+Fetching io-like 0.3.1
+Fetching public_suffix 4.0.6
+Installing websocket-extensions 0.1.5
+Fetching msgpack 1.4.2
+Installing crass 1.0.6
+Using bundler 2.2.16
+Fetching byebug 11.1.3
+Installing erubi 1.10.0
+Fetching regexp_parser 2.1.1
+Installing arel 9.0.0
+Fetching childprocess 3.0.0
+Installing builder 3.2.4
+Fetching coffee-script-source 1.12.2
+Installing bindex 0.8.1 with native extensions
+Installing marcel 1.0.1
+Fetching execjs 2.7.0
+Fetching method_source 1.0.0
+Installing execjs 2.7.0
+Fetching thor 1.1.0
+Installing io-like 0.3.1
+Fetching ffi 1.15.0
+Installing mini_mime 1.1.0
+Fetching rb-fsevent 0.10.4
+Installing method_source 1.0.0
+Fetching ruby_dep 1.5.0
+Installing childprocess 3.0.0
+Fetching pg 1.2.3
+Installing ruby_dep 1.5.0
+Fetching puma 3.12.6
+Installing minitest 5.14.4
+Fetching rubyzip 2.3.0
+Installing rb-fsevent 0.10.4
+Fetching tilt 2.0.10
+Installing coffee-script-source 1.12.2
+Installing thread_safe 0.3.6
+Fetching spring 2.1.1
+Fetching turbolinks-source 5.2.0
+Installing thor 1.1.0
+Installing turbolinks-source 5.2.0
+Installing rubyzip 2.3.0
+Installing msgpack 1.4.2 with native extensions
+Fetching websocket-driver 0.7.3
+Fetching uglifier 4.2.0
+Installing byebug 11.1.3 with native extensions
+Fetching archive-zip 0.12.0
+Installing rack 2.2.3
+Installing tilt 2.0.10
+Installing websocket-driver 0.7.3 with native extensions
+Installing spring 2.1.1
+Installing public_suffix 4.0.6
+Installing regexp_parser 2.1.1
+Installing nio4r 2.5.7 with native extensions
+Fetching mail 2.7.1
+Installing archive-zip 0.12.0
+Fetching coffee-script 2.4.1
+Installing coffee-script 2.4.1
+Fetching tzinfo 1.2.9
+Fetching turbolinks 5.2.1
+Fetching selenium-webdriver 3.142.7
+Installing turbolinks 5.2.1
+Fetching bootsnap 1.7.4
+Fetching rack-test 1.1.0
+Fetching addressable 2.7.0
+Installing puma 3.12.6 with native extensions
+Installing rack-test 1.1.0
+Installing pg 1.2.3 with native extensions
+Installing bootsnap 1.7.4 with native extensions
+Installing uglifier 4.2.0
+Installing concurrent-ruby 1.1.8
+Installing addressable 2.7.0
+Installing racc 1.5.2 with native extensions
+Installing tzinfo 1.2.9
+Fetching i18n 1.8.10
+Fetching sprockets 3.7.2
+Fetching nokogiri 1.11.3 (x86_64-darwin)
+Installing i18n 1.8.10
+Fetching activesupport 5.2.5
+Installing sprockets 3.7.2
+Installing mail 2.7.1
+Installing activesupport 5.2.5
+Fetching globalid 0.4.2
+Fetching jbuilder 2.11.2
+Fetching activemodel 5.2.5
+Installing globalid 0.4.2
+Fetching activejob 5.2.5
+Installing jbuilder 2.11.2
+Installing ffi 1.15.0 with native extensions
+Installing activejob 5.2.5
+Installing activemodel 5.2.5
+Installing selenium-webdriver 3.142.7
+Fetching activerecord 5.2.5
+Fetching rb-inotify 0.10.1
+Installing rb-inotify 0.10.1
+Fetching sass-listen 4.0.0
+Fetching listen 3.1.5
+Installing sass-listen 4.0.0
+Fetching sass 3.7.4
+Installing listen 3.1.5
+Fetching spring-watcher-listen 2.0.1
+Installing spring-watcher-listen 2.0.1
+Installing sass 3.7.4
+Installing activerecord 5.2.5
+Installing nokogiri 1.11.3 (x86_64-darwin)
+Fetching rails-dom-testing 2.0.3
+Fetching xpath 3.2.0
+Fetching chromedriver-helper 2.1.1
+Fetching loofah 2.9.1
+Installing xpath 3.2.0
+Installing rails-dom-testing 2.0.3
+Fetching capybara 3.35.3
+Installing chromedriver-helper 2.1.1
+Installing loofah 2.9.1
+Fetching rails-html-sanitizer 1.3.0
+Installing rails-html-sanitizer 1.3.0
+Fetching actionview 5.2.5
+Installing actionview 5.2.5
+Fetching actionpack 5.2.5
+Installing capybara 3.35.3
+Installing actionpack 5.2.5
+Fetching actioncable 5.2.5
+Fetching sprockets-rails 3.2.2
+Fetching activestorage 5.2.5
+Fetching railties 5.2.5
+Fetching actionmailer 5.2.5
+Installing sprockets-rails 3.2.2
+Installing actionmailer 5.2.5
+Installing actioncable 5.2.5
+Installing activestorage 5.2.5
+Installing railties 5.2.5
+Fetching coffee-rails 4.2.2
+Fetching rails 5.2.5
+Fetching web-console 3.7.0
+Fetching sass-rails 5.1.0
+Installing coffee-rails 4.2.2
+Installing rails 5.2.5
+Installing sass-rails 5.1.0
+Installing web-console 3.7.0
+Bundle complete! 18 Gemfile dependencies, 77 gems now installed.
+Bundled gems are installed into `./vendor/bundle`
+Post-install message from chromedriver-helper:
+
+  +--------------------------------------------------------------------+
+  |                                                                    |
+  |  NOTICE: chromedriver-helper is deprecated after 2019-03-31.       |
+  |                                                                    |
+  |  Please update to use the 'webdrivers' gem instead.                |
+  |  See https://github.com/flavorjones/chromedriver-helper/issues/83  |
+  |                                                                    |
+  +--------------------------------------------------------------------+
+
+Post-install message from sass:
+
+Ruby Sass has reached end-of-life and should no longer be used.
+
+* If you use Sass as a command-line tool, we recommend using Dart Sass, the new
+  primary implementation: https://sass-lang.com/install
+
+* If you use Sass as a plug-in for a Ruby web framework, we recommend using the
+  sassc gem: https://github.com/sass/sassc-ruby#readme
+
+* For more details, please refer to the Sass blog:
+  https://sass-lang.com/blog/posts/7828841
+
+         run  bundle exec spring binstub --all
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler/vendor/fileutils/lib/fileutils.rb:1186: warning: already initialized constant Bundler::FileUtils::Entry_::S_IF_DOOR
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/vendor/fileutils/lib/fileutils.rb:1284: warning: previous definition of S_IF_DOOR was here
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler/vendor/fileutils/lib/fileutils.rb:1444: warning: already initialized constant Bundler::FileUtils::Entry_::DIRECTORY_TERM
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/vendor/fileutils/lib/fileutils.rb:1568: warning: previous definition of DIRECTORY_TERM was here
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler/vendor/fileutils/lib/fileutils.rb:1499: warning: already initialized constant Bundler::FileUtils::OPT_TABLE
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/vendor/fileutils/lib/fileutils.rb:1626: warning: previous definition of OPT_TABLE was here
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler/vendor/fileutils/lib/fileutils.rb:1553: warning: already initialized constant Bundler::FileUtils::LOW_METHODS
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/vendor/fileutils/lib/fileutils.rb:1685: warning: previous definition of LOW_METHODS was here
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler/vendor/fileutils/lib/fileutils.rb:1560: warning: already initialized constant Bundler::FileUtils::METHODS
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/vendor/fileutils/lib/fileutils.rb:1692: warning: previous definition of METHODS was here
+bundler: failed to load command: spring (/Users/hirokore-mac/workspace/rails/callback_app/vendor/bundle/ruby/2.6.0/bin/spring)
+Traceback (most recent call last):
+        26: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/exe/bundle:37:in `<main>'
+        25: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/friendly_errors.rb:130:in `with_friendly_errors'
+        24: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/exe/bundle:49:in `block in <main>'
+        23: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/cli.rb:24:in `start'
+        22: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+        21: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/cli.rb:30:in `dispatch'
+        20: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+        19: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+        18: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+        17: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/cli.rb:494:in `exec'
+        16: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/cli/exec.rb:28:in `run'
+        15: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/cli/exec.rb:63:in `kernel_load'
+        14: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/bundler-2.2.16/lib/bundler/cli/exec.rb:63:in `load'
+        13: from /Users/hirokore-mac/workspace/rails/callback_app/vendor/bundle/ruby/2.6.0/bin/spring:23:in `<top (required)>'
+        12: from /Users/hirokore-mac/workspace/rails/callback_app/vendor/bundle/ruby/2.6.0/bin/spring:23:in `load'
+        11: from /Users/hirokore-mac/workspace/rails/callback_app/vendor/bundle/ruby/2.6.0/gems/spring-2.1.1/bin/spring:48:in `<top (required)>'
+        10: from /Users/hirokore-mac/workspace/rails/callback_app/vendor/bundle/ruby/2.6.0/gems/spring-2.1.1/bin/spring:48:in `require'
+         9: from /Users/hirokore-mac/workspace/rails/callback_app/vendor/bundle/ruby/2.6.0/gems/spring-2.1.1/lib/spring/client.rb:5:in `<top (required)>'
+         8: from /Users/hirokore-mac/workspace/rails/callback_app/vendor/bundle/ruby/2.6.0/gems/spring-2.1.1/lib/spring/client.rb:5:in `require'
+         7: from /Users/hirokore-mac/workspace/rails/callback_app/vendor/bundle/ruby/2.6.0/gems/spring-2.1.1/lib/spring/client/run.rb:3:in `<top (required)>'
+         6: from /Users/hirokore-mac/workspace/rails/callback_app/vendor/bundle/ruby/2.6.0/gems/spring-2.1.1/lib/spring/client/run.rb:3:in `require'
+         5: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler.rb:10:in `<top (required)>'
+         4: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler.rb:10:in `require'
+         3: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler/errors.rb:3:in `<top (required)>'
+         2: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler/errors.rb:20:in `<module:Bundler>'
+         1: from /Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler/errors.rb:20:in `<class:GemfileError>'
+/Users/hirokore-mac/.rbenv/versions/2.6.6/lib/ruby/2.6.0/bundler/errors.rb:9:in `status_code': Trying to register Bundler::GemfileError for status code 4 but Bundler::GemfileError is already registered (ArgumentError)
+rails % # 
