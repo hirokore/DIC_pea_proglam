@@ -2,12 +2,11 @@ require './Drink.rb'
 
 class VendingMachine
 
-  # 10円玉、50円玉、100円玉、500円玉、1000円札を１つずつ投入できる。
+  # 10円玉、50円玉、100円玉、500円玉、1000円札を固定させた定数
   MONEY = [10, 50, 100, 500, 1000].freeze
 
-  # （自動販売機に投入された金額をインスタンス変数の @slot_money に代入する）
+  # インスタンス変数の定義
   def initialize
-    # 最初の自動販売機に入っている金額は0円
     @total_amount = 0
     @slot_money = 0
     @cora = {name: Drink.cora.name, value: Drink.cora.value,count: Drink.cora.count}
@@ -37,13 +36,12 @@ class VendingMachine
     end
   end
 
-  # 投入金額の総計を取得できる。
+  # 投入金額の総計を取得できる機能
   def current_slot_money
     @slot_money
   end
 
-  # 10円玉、50円玉、100円玉、500円玉、1000円札を１つずつ投入できる。
-  # 投入は複数回できる。
+  # 10円玉、50円玉、100円玉、500円玉、1000円札を１つずつ投入できる機能
   def slot_money(money)
     # 想定外のもの（１円玉や５円玉。千円札以外のお札、そもそもお金じゃないもの（数字以外のもの）など）
     # が投入された場合は、投入金額に加算せず、それをそのまま釣り銭としてユーザに出力する。
@@ -53,7 +51,7 @@ class VendingMachine
     puts "#{@slot_money}円、投入しました。"
   end
 
-  # 払い戻し操作を行うと、投入金額の総計を釣り銭として出力する。
+  # 払い戻し操作を行うと、投入金額の総計を釣り銭として出力する機能
   def return_money
     # 返すお金の金額を表示する
     puts "お釣りは#{@slot_money}円です。"
@@ -109,7 +107,7 @@ class VendingMachine
     end
   end
 
-  # 総合売り上げ金出力
+  # 総合売り上げ金出力機能
   def sale_amount
     puts "総売上金は#{@total_amount}円です。"
   end
