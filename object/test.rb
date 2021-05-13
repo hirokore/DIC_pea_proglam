@@ -1,35 +1,35 @@
  
-# —á
+# ï¿½ï¿½
 # irb
-# require e/Users/shibatadaiki/work_shiba/full_stack/sample.rbf
-# iª‚ÌƒpƒX‚ÍAŽ©“®”Ì”„‹@ƒtƒ@ƒCƒ‹‚ª“ü‚Á‚Ä‚¢‚éƒpƒX‚ðŽw’è‚·‚éj
-# ‰ŠúÝ’èiŽ©“®”Ì”„‹@ƒCƒ“ƒXƒ^ƒ“ƒX‚ðì¬‚µ‚ÄAvm‚Æ‚¢‚¤•Ï”‚É‘ã“ü‚·‚éj
+# require ï¿½e/Users/shibatadaiki/work_shiba/full_stack/sample.rbï¿½f
+# ï¿½iï¿½ï¿½ï¿½Ìƒpï¿½Xï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½pï¿½Xï¿½ï¿½ï¿½wï¿½è‚·ï¿½ï¿½j
+# ï¿½ï¿½ï¿½ï¿½ï¿½Ý’ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½Cï¿½ï¿½ï¿½Xï¿½^ï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ì¬ï¿½ï¿½ï¿½ÄAvmï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Ïï¿½ï¿½É‘ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½j
 # vm = VendingMachine.new
-# ì¬‚µ‚½Ž©“®”Ì”„‹@‚É100‰~‚ð“ü‚ê‚é
+# ï¿½ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½ï¿½100ï¿½~ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 # vm.slot_money (100)
-# ì¬‚µ‚½Ž©“®”Ì”„‹@‚É“ü‚ê‚½‚¨‹à‚ª‚¢‚­‚ç‚©‚ðŠm”F‚·‚éi•\Ž¦‚·‚éj
+# ï¿½ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½É“ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç‚©ï¿½ï¿½ï¿½mï¿½Fï¿½ï¿½ï¿½ï¿½iï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½j
 # vm.current_slot_money
-# ì¬‚µ‚½Ž©“®”Ì”„‹@‚É“ü‚ê‚½‚¨‹à‚ð•Ô‚µ‚Ä‚à‚ç‚¤
+# ï¿½ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½É“ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô‚ï¿½ï¿½Ä‚ï¿½ï¿½ç‚¤
 # vm.return_money
 class VendingMachine
-  # ƒXƒeƒbƒv‚O@‚¨‹à‚Ì“Š“ü‚Æ•¥‚¢–ß‚µ‚Ì—áƒR[ƒh
-  # ƒXƒeƒbƒv‚P@ˆµ‚¦‚È‚¢‚¨‹à‚Ì—áƒR[ƒh
-  # 10‰~‹ÊA50‰~‹ÊA100‰~‹ÊA500‰~‹ÊA1000‰~ŽD‚ð‚P‚Â‚¸‚Â“Š“ü‚Å‚«‚éB
+  # ï¿½Xï¿½eï¿½bï¿½vï¿½Oï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½Ì“ï¿½ï¿½ï¿½ï¿½Æ•ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½Ì—ï¿½Rï¿½[ï¿½h
+  # ï¿½Xï¿½eï¿½bï¿½vï¿½Pï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì—ï¿½Rï¿½[ï¿½h
+  # 10ï¿½~ï¿½ÊA50ï¿½~ï¿½ÊA100ï¿½~ï¿½ÊA500ï¿½~ï¿½ÊA1000ï¿½~ï¿½Dï¿½ï¿½ï¿½Pï¿½Â‚ï¿½ï¿½Â“ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½B
   MONEY = [10, 50, 100, 500, 1000].freeze
-  # iŽ©“®”Ì”„‹@‚É“Š“ü‚³‚ê‚½‹àŠz‚ðƒCƒ“ƒXƒ^ƒ“ƒX•Ï”‚Ì @slot_money ‚É‘ã“ü‚·‚éj
+  # ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½É“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½zï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½^ï¿½ï¿½ï¿½Xï¿½Ïï¿½ï¿½ï¿½ @slot_money ï¿½É‘ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½j
   def initialize
-    # Å‰‚ÌŽ©“®”Ì”„‹@‚É“ü‚Á‚Ä‚¢‚é‹àŠz‚Í0‰~
+    # ï¿½Åï¿½ï¿½ÌŽï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½É“ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½zï¿½ï¿½0ï¿½~
     # @name = []
     @total_amount = 0
     @slot_money = 0
-    @cora = {name:"ƒR[ƒ‰",value:120,count:5}
-    @redbull = {name: "ƒŒƒbƒhƒuƒ‹", value: 200, count: 5}
-    @water = {name: "…", value: 100, count: 5}
+    @cora = {name:"ï¿½Rï¿½[ï¿½ï¿½",value:120,count:5}
+    @redbull = {name: "ï¿½ï¿½ï¿½bï¿½hï¿½uï¿½ï¿½", value: 200, count: 5}
+    @water = {name: "ï¿½ï¿½", value: 100, count: 5}
 
     # @select_drink = []
     @select_drink << {
-      cora: {name:'ƒR[ƒ‰',value: 120, count: 5},
-      redbull: {name:'ƒŒƒbƒhƒuƒ‹', value: 200, count: 5}
+      cora: {name:'ï¿½Rï¿½[ï¿½ï¿½',value: 120, count: 5},
+      redbull: {name:'ï¿½ï¿½ï¿½bï¿½hï¿½uï¿½ï¿½', value: 200, count: 5}
     }
   end
 
@@ -39,69 +39,69 @@ class VendingMachine
     # @name << @water
     @list = []
     @select_drink.each do |list|
-    if purchase_decision == 'w“ü‰Â”\'
+    if purchase_decision == 'ï¿½wï¿½ï¿½ï¿½Â”\'
       @list << list[0][:name]
     end
    end
    p @list
   end
-  # “Š“ü‹àŠz‚Ì‘Œv‚ðŽæ“¾‚Å‚«‚éB
+  # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½zï¿½Ì‘ï¿½ï¿½vï¿½ï¿½ï¿½æ“¾ï¿½Å‚ï¿½ï¿½ï¿½B
   def current_slot_money
-    # Ž©“®”Ì”„‹@‚É“ü‚Á‚Ä‚¢‚é‚¨‹à‚ð•\Ž¦‚·‚é
+    # ï¿½ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½É“ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½é‚¨ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     @slot_money
   end
-  # 10‰~‹ÊA50‰~‹ÊA100‰~‹ÊA500‰~‹ÊA1000‰~ŽD‚ð‚P‚Â‚¸‚Â“Š“ü‚Å‚«‚éB
-  # “Š“ü‚Í•¡”‰ñ‚Å‚«‚éB
+  # 10ï¿½~ï¿½ÊA50ï¿½~ï¿½ÊA100ï¿½~ï¿½ÊA500ï¿½~ï¿½ÊA1000ï¿½~ï¿½Dï¿½ï¿½ï¿½Pï¿½Â‚ï¿½ï¿½Â“ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½B
+  # ï¿½ï¿½ï¿½ï¿½ï¿½Í•ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½B
   def slot_money(money)
-    # ‘z’èŠO‚Ì‚à‚Ìi‚P‰~‹Ê‚â‚T‰~‹ÊBç‰~ŽDˆÈŠO‚Ì‚¨ŽDA‚»‚à‚»‚à‚¨‹à‚¶‚á‚È‚¢‚à‚Ìi”ŽšˆÈŠO‚Ì‚à‚Ìj‚È‚Çj
-    # ‚ª“Š“ü‚³‚ê‚½ê‡‚ÍA“Š“ü‹àŠz‚É‰ÁŽZ‚¹‚¸A‚»‚ê‚ð‚»‚Ì‚Ü‚Ü’Þ‚è‘K‚Æ‚µ‚Äƒ†[ƒU‚Éo—Í‚·‚éB
+    # ï¿½zï¿½ï¿½Oï¿½Ì‚ï¿½ï¿½Ìiï¿½Pï¿½~ï¿½Ê‚ï¿½Tï¿½~ï¿½ÊBï¿½ï¿½~ï¿½Dï¿½ÈŠOï¿½Ì‚ï¿½ï¿½Dï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½Ìiï¿½ï¿½ï¿½ï¿½ï¿½ÈŠOï¿½Ì‚ï¿½ï¿½Ìjï¿½È‚Çj
+    # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½ê‡ï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½zï¿½É‰ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ü‚Ü’Þ‚ï¿½Kï¿½Æ‚ï¿½ï¿½Äƒï¿½ï¿½[ï¿½Uï¿½Éoï¿½Í‚ï¿½ï¿½ï¿½B
     return false unless MONEY.include?(money)
-    # Ž©“®”Ì”„‹@‚É‚¨‹à‚ð“ü‚ê‚é
+    # ï¿½ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     @slot_money += money
-    puts "#{@slot_money}‰~A“Š“ü‚µ‚Ü‚µ‚½B"
+    puts "#{@slot_money}ï¿½~ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B"
   end
-  # •¥‚¢–ß‚µ‘€ì‚ðs‚¤‚ÆA“Š“ü‹àŠz‚Ì‘Œv‚ð’Þ‚è‘K‚Æ‚µ‚Äo—Í‚·‚éB
+  # ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ÆAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½zï¿½Ì‘ï¿½ï¿½vï¿½ï¿½Þ‚ï¿½Kï¿½Æ‚ï¿½ï¿½Äoï¿½Í‚ï¿½ï¿½ï¿½B
   def return_money
-    # •Ô‚·‚¨‹à‚Ì‹àŠz‚ð•\Ž¦‚·‚é
-    puts "‚¨’Þ‚è‚Í#{@slot_money}‰~‚Å‚·B"
-    # Ž©“®”Ì”„‹@‚É“ü‚Á‚Ä‚¢‚é‚¨‹à‚ð0‰~‚É–ß‚·
+    # ï¿½Ô‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½zï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    puts "ï¿½ï¿½ï¿½Þ‚ï¿½ï¿½#{@slot_money}ï¿½~ï¿½Å‚ï¿½ï¿½B"
+    # ï¿½ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½@ï¿½É“ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½é‚¨ï¿½ï¿½ï¿½ï¿½0ï¿½~ï¿½É–ß‚ï¿½
     @slot_money = 0
   end
-  def juce_manage
-    puts "#{@select_drink[:cora][:name]}‚Í#{@select_drink[:cora][:value]}‰~AŽc‚è#{@select_drink[:cora][:count]}–{‚Å‚·B"
+  def juice_manage
+    puts "#{@select_drink[:cora][:name]}ï¿½ï¿½#{@select_drink[:cora][:value]}ï¿½~ï¿½Aï¿½cï¿½ï¿½#{@select_drink[:cora][:count]}ï¿½{ï¿½Å‚ï¿½ï¿½B"
   end
 
   def purchase_decision
     if @select_drink[:cora][:count] == 0      
-      "ÝŒÉØ‚ê"
+      "ï¿½ÝŒÉØ‚ï¿½"
     elsif @select_drink[:cora][:value] > @slot_money
-      "‹àŠz•s‘«"
+      "ï¿½ï¿½ï¿½zï¿½sï¿½ï¿½"
     else
-      "w“ü‰Â”\"
+      "ï¿½wï¿½ï¿½ï¿½Â”\"
     end
   end
-  def juce_buy
-    if purchase_decision == "w“ü‰Â”\"
+  def juice_buy
+    if purchase_decision == "ï¿½wï¿½ï¿½ï¿½Â”\"
       @select_drink[:cora][:count] -= 1
       @total_amount = @total_amount + @select_drink[:cora][:value]
       reduce_money(@select_drink[:cora][:value])
-      puts "‚Í‚¢A#{@select_drink[:cora][:name]}‚¾‚æB"
-    elsif purchase_decision == "ÝŒÉØ‚ê"
+      puts "ï¿½Í‚ï¿½ï¿½A#{@select_drink[:cora][:name]}ï¿½ï¿½ï¿½ï¿½B"
+    elsif purchase_decision == "ï¿½ÝŒÉØ‚ï¿½"
       purchase_decision
-    elsif purchase_decision == "‹àŠz•s‘«"
+    elsif purchase_decision == "ï¿½ï¿½ï¿½zï¿½sï¿½ï¿½"
       purchase_decision
     #   @total = @total + select_drink[:value]
     #   select_drink[:count] -= 1
-    #   puts "‚Í‚¢A#{select_drink[:name]}‚¾‚æB"
+    #   puts "ï¿½Í‚ï¿½ï¿½A#{select_drink[:name]}ï¿½ï¿½ï¿½ï¿½B"
     # else
-    #   juce_jude(drink)
+    #   juice_jude(drink)
     # end
     # if current_slot_money >= 0
-    #   puts "#{current_slot_money}‰~‚Ì‚¨’Þ‚è‚Å‚·B"
+    #   puts "#{current_slot_money}ï¿½~ï¿½Ì‚ï¿½ï¿½Þ‚ï¿½Å‚ï¿½ï¿½B"
     end
   end
   def sale_amount
-    puts "‘”„ã‹à‚Í#{@total_amount}‰~‚Å‚·B"
+    puts "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#{@total_amount}ï¿½~ï¿½Å‚ï¿½ï¿½B"
   end
   
   def reduce_money(i)
@@ -111,11 +111,11 @@ class VendingMachine
 end
 
 vm = VendingMachine.new
- vm.juce_manage
+ vm.juice_manage
 
  vm.slot_money(500)
 
- vm.juce_buy
+ vm.juice_buy
 
  vm.sale_amount
 

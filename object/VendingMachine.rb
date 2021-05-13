@@ -1,32 +1,29 @@
-   
-# 例
-# irb
-# require ‘/Users/shibatadaiki/work_shiba/full_stack/sample.rb’
-# （↑のパスは、自動販売機ファイルが入っているパスを指定する）
-# 初期設定（自動販売機インスタンスを作成して、vmという変数に代入する）
-# vm = VendingMachine.new
-# 作成した自動販売機に100円を入れる
-# vm.slot_money (100)
-# 作成した自動販売機に入れたお金がいくらかを確認する（表示する）
-# vm.current_slot_money
-# 作成した自動販売機に入れたお金を返してもらう
-# vm.return_money
+require './Drink.rb'
+
 class VendingMachine
-  # ステップ０　お金の投入と払い戻しの例コード
-  # ステップ１　扱えないお金の例コード
+
   # 10円玉、50円玉、100円玉、500円玉、1000円札を１つずつ投入できる。
   MONEY = [10, 50, 100, 500, 1000].freeze
+
   # （自動販売機に投入された金額をインスタンス変数の @slot_money に代入する）
   def initialize
     # 最初の自動販売機に入っている金額は0円
     @total_amount = 0
     @slot_money = 0
-    @cora = {name:"コーラ",value:120,count:5}
-    @redbull = {name:"レッドブル",value:200,count:5}
-    @water = {name:"水",value:100,count:5}
-
+    @cora = {name: Drink.cora.name, value: Drink.cora.value,count: Drink.cora.count}
+    @redbull = {name:Drink.redbull.name,value: Drink.redbull.value,count: Drink.redbull.count}
+    @water = {name: Drink.water.name,value: Drink.water.value,count: Drink.water.count}
+    @oden = {name: Drink.oden.name,value: Drink.oden.value,count: Drink.oden.count}
   end
 
+  
+  # drink補充機能
+  def add_to_drink(drink,count)
+    @add_drink = drink_select(drink)
+    @add_drink[:count] += count
+  end
+
+  # 飲み物名を選択する機能
   def drink_select(drink)
     if drink == "コーラ"
       @cora
@@ -34,6 +31,8 @@ class VendingMachine
       @redbull
     elsif drink == "水"
       @water
+    elsif drink == "おでん"
+      @oden
     else
       puts "現在、実装されておりません。"        
     end
@@ -41,9 +40,9 @@ class VendingMachine
 
   # 投入金額の総計を取得できる。
   def current_slot_money
-    # 自動販売機に入っているお金を表示する
     @slot_money
   end
+
   # 10円玉、50円玉、100円玉、500円玉、1000円札を１つずつ投入できる。
   # 投入は複数回できる。
   def slot_money(money)
@@ -54,6 +53,7 @@ class VendingMachine
     @slot_money += money
     puts "#{@slot_money}円、投入しました。"
   end
+
   # 払い戻し操作を行うと、投入金額の総計を釣り銭として出力する。
   def return_money
     # 返すお金の金額を表示する
@@ -62,8 +62,8 @@ class VendingMachine
     @slot_money = 0
   end
 
-
-  def juce_manage
+  # 購入可能drinkを表示する機能 
+  def juice_manage
     # puts "#{@cora[:name]}は#{@cora[:value]}円、残り#{@cora[:count]}本です。"
     puts "#-------------------購入可能リスト-----------------------#"
 
@@ -73,12 +73,9 @@ class VendingMachine
       end
     end
     puts "#--------------------------------------------------------#"
-
-    # machine.insert 100
-    # machine.insert 50
-    # machine.purchasable_drink_names # => [:cola, :water]
   end
 
+  # ドリンクが買えるかどうかを判断する機能
   def purchase_decision(drink)
      @selected_drink = drink_select(drink)
     if @selected_drink[:count] == 0      
@@ -90,23 +87,35 @@ class VendingMachine
     end
   end
 
-  def juce_buy(drink)
+  # ランダム購入機能
+  def rand_buy
+    rand_drink = ["コーラ","レッドブル","水","おでん"].sample
+    juice_buy(rand_drink)
+  end
+
+  # drink購入の一連処理を行う機能
+  def juice_buy(drink)
     @selected_drink = drink_select(drink)
     if purchase_decision(drink) == "購入可能"
       @selected_drink[:count] -= 1
       @total_amount = @total_amount + @selected_drink[:value]
       reduce_money(@selected_drink[:value])
       puts "はい、#{@selected_drink[:name]}だよ。"
+      # お釣り出す
+      return_money
     elsif purchase_decision(drink) == "在庫切れ"
       purchase_decision(drink)
     elsif purchase_decision(drink) == "金額不足"
       purchase_decision(drink)
     end
   end
+
+  # 総合売り上げ金出力
   def sale_amount
     puts "総売上金は#{@total_amount}円です。"
   end
   
+  # 自販機内でお金を減らす機能
   def reduce_money(i)
     @slot_money -= i
   end
@@ -114,10 +123,10 @@ end
 
 vm = VendingMachine.new
 
-vm.slot_money(500)
+# vm.slot_money(500)
 
-vm.juce_manage
+# vm.juice_manage
 
-vm.juce_buy("コーラ")
+# vm.juice_buy("コーラ")
 
-vm.sale_amount
+# vm.sale_amount
