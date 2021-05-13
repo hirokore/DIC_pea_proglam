@@ -15,7 +15,6 @@ class VendingMachine
     @water = {name: Drink.water.name,value: Drink.water.value,count: Drink.water.count}
     @oden = {name: Drink.oden.name,value: Drink.oden.value,count: Drink.oden.count}
   end
-
   
   # drink補充機能
   def add_to_drink(drink,count)
