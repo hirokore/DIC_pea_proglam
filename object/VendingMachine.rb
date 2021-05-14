@@ -21,21 +21,6 @@ class VendingMachine
     @add_drink[:count] += count
   end   
 
-  # 飲み物名を選択する機能
-  def drink_select(drink)
-    if drink == "コーラ"
-      @cora
-    elsif drink == "レッドブル"
-      @redbull
-    elsif drink == "水"
-      @water
-    elsif drink == "おでん"
-      @oden
-    else
-      puts "現在、実装されておりません。"        
-    end
-  end
-
   # 投入金額の総計を取得できる機能
   def current_slot_money
     @slot_money
@@ -72,18 +57,6 @@ class VendingMachine
     puts "#--------------------------------------------------------#"
   end
 
-  # ドリンクが買えるかどうかを判断する機能
-  def purchase_decision(drink)
-     @selected_drink = drink_select(drink)
-    if @selected_drink[:count] == 0      
-      "在庫切れ"
-    elsif @selected_drink[:value] > @slot_money
-      "金額不足"
-    else
-      "購入可能"
-    end
-  end
-
   # ランダム購入機能
   def rand_buy
     rand_drink = ["コーラ","レッドブル","水","おでん"].sample
@@ -95,7 +68,7 @@ class VendingMachine
     @selected_drink = drink_select(drink)
     if purchase_decision(drink) == "購入可能"
       @selected_drink[:count] -= 1
-      @total_amount = @total_amount + @selected_drink[:value]
+      @total_amount += @selected_drink[:value]
       reduce_money(@selected_drink[:value])
       puts "はい、#{@selected_drink[:name]}だよ。"
       # お釣り出す
@@ -112,6 +85,35 @@ class VendingMachine
     puts "総売上金は#{@total_amount}円です。"
   end
   
+  private
+
+  # 飲み物名を選択する機能
+  def drink_select(drink)
+    if drink == "コーラ"
+      @cora
+    elsif drink == "レッドブル"
+      @redbull
+    elsif drink == "水"
+      @water
+    elsif drink == "おでん"
+      @oden
+    else
+      puts "現在、実装されておりません。"        
+    end
+  end 
+
+  # ドリンクが買えるかどうかを判断する機能
+  def purchase_decision(drink)
+    @selected_drink = drink_select(drink)
+    if @selected_drink[:count] == 0      
+      "在庫切れ"
+    elsif @selected_drink[:value] > @slot_money
+      "金額不足"
+    else
+      "購入可能"
+    end
+  end
+
   # 自販機内でお金を減らす機能
   def reduce_money(i)
     @slot_money -= i
@@ -119,14 +121,3 @@ class VendingMachine
 end
 
 vm = VendingMachine.new
-
-# vm.slot_money(500)
-
-# vm.juice_manage
-
-# vm.juice_buy("コーラ")
-
-# vm.sale_amount
-# vm.sale_amount
-# vm.sale_amount
-# vm.sale_amount
