@@ -1,4 +1,4 @@
-require './Drink.rb'
+  require './Drink.rb'
 
 class VendingMachine
 
@@ -19,7 +19,7 @@ class VendingMachine
   def add_to_drink(drink,count)
     @add_drink = drink_select(drink)
     @add_drink[:count] += count
-  end
+  end   
 
   # 飲み物名を選択する機能
   def drink_select(drink)
@@ -64,7 +64,7 @@ class VendingMachine
     # puts "#{@cora[:name]}は#{@cora[:value]}円、残り#{@cora[:count]}本です。"
     puts "#-------------------購入可能リスト-----------------------#"
 
-    [@cora,@redbull,@water].each do |drink|
+    [@cora,@redbull,@water,@oden].each do |drink|
       if  drink[:count] > 0 && drink[:value] <= @slot_money        
        puts "#{drink[:name]}は#{drink[:value]}円、残り#{drink[:count]}本です。"
       end
@@ -126,4 +126,7 @@ vm = VendingMachine.new
 
 # vm.juice_buy("コーラ")
 
+# vm.sale_amount
+# vm.sale_amount
+# vm.sale_amount
 # vm.sale_amount
