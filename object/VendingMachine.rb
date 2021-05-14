@@ -1,4 +1,4 @@
-  require './Drink.rb'
+require './Drink.rb'
 
 class VendingMachine
 
